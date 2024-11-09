@@ -11,7 +11,7 @@ This tool allows users to authenticate with OTC services and perform API request
 - Provides detailed logging of requests and responses.
 
 ## Requirements
-- Python 3.8+
+- Python 3.12.5+
 - Packages listed in `requirements.txt`.
 
 ## Installation
@@ -57,14 +57,11 @@ This tool allows users to authenticate with OTC services and perform API request
            {
                "id": "server-id-1",
                "name": "Example Server",
-               // ...
            },
            {
                "id": "server-id-2",
                "name": "Another Server",
-               // ...
            },
-           // ...
        ]
    }
    ```
