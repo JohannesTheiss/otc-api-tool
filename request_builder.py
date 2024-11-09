@@ -97,6 +97,22 @@ def sha256_hash(text):
     return hashlib.sha256(text.encode('utf-8')).hexdigest()
 
 def sign_request(secret_key, message):
+    """
+    Generates an HMAC (Hash-based Message Authentication Code) for the given message and secret key.
+
+    Note:
+    - HMAC is not a digital signing algorithm but a Message Authentication Code (MAC). 
+      It verifies both data integrity and authenticity but does not provide non-repudiation 
+      (a key feature of digital signatures). HMAC is typically used to ensure that a message 
+      has not been altered and is from a known sender, as both sender and receiver share the same secret key.
+
+    Parameters:
+        secret_key (str): The secret key used to generate the HMAC.
+        message (str): The message to authenticate.
+
+    Returns:
+        str: The HMAC signature as a hexadecimal string.
+    """
     # HMAC with the Secret key
     return hmac.new(secret_key.encode('utf-8'), message.encode('utf-8'), hashlib.sha256).hexdigest()
 

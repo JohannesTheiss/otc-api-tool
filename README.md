@@ -3,7 +3,7 @@
 A Python tool for interacting with the Open Telekom Cloud (OTC) API, supporting both Access Key/Secret Key (AK/SK) and API Password-based authentication methods. 
 This tool allows users to authenticate with OTC services and perform API requests to retrieve data about their resources.
 
-**Note:** This is an unofficial tool developed independently and is not affiliated with, endorsed, or supported by Open Telekom Cloud (OTC) or its parent organizations.
+**Note:** This is an unofficial tool developed independently and is not affiliated with, endorsed, or supported by Open Telekom Cloud (OTC).
 
 ## Features
 - Supports AK/SK and API Password authentication.
@@ -11,7 +11,7 @@ This tool allows users to authenticate with OTC services and perform API request
 - Provides detailed logging of requests and responses.
 
 ## Requirements
-- Python 3.12.5+
+- Python 3.12+
 - Packages listed in `requirements.txt`.
 
 ## Installation
@@ -51,17 +51,20 @@ This tool allows users to authenticate with OTC services and perform API request
 
 2. **Example Output**:
    After running the tool, the output for the list of servers might look like this:
-   ```json
+   ```jsonc
    {
        "servers": [
            {
                "id": "server-id-1",
                "name": "Example Server",
+               // ...
            },
            {
                "id": "server-id-2",
                "name": "Another Server",
+               // ...
            },
+           // ...
        ]
    }
    ```
